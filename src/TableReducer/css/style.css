@@ -1,0 +1,564 @@
+.table-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+}
+.table-container .header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-container .header h3 {
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 150%;
+  color: #ffffff;
+}
+.table-container .header h3 span {
+  width: 86px;
+  height: 31px;
+  padding: 5px 30px;
+  font-size: 15px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 48px;
+}
+.table-container .header .search {
+  display: flex;
+  position: relative;
+}
+.table-container .header .search .search {
+  width: 378px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px 0px 0px 8px;
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 150%;
+  color: #ffffff;
+  padding-left: 10px;
+}
+.table-container .header .search .search::-moz-placeholder {
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+}
+.table-container .header .search .search:-ms-input-placeholder {
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+}
+.table-container .header .search .search::placeholder {
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+}
+.table-container .header .search button {
+  width: 110px;
+  height: 40px;
+  border: none;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 0px 8px 8px 0px;
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  gap: 10px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  color: #ffffff;
+}
+.table-container .header .search button .filter {
+  font-size: 18px;
+}
+.table-container .header .search .filterDiv {
+  position: absolute;
+  width: 280px;
+  height: 552px;
+  right: 0;
+  top: 55px;
+  z-index: 100;
+  position: absolute;
+  background: #2e2b35;
+  box-shadow: -40px 8px 32px rgba(0, 0, 0, 0.52);
+  border-radius: 8px;
+  padding: 16px 24px;
+  -webkit-animation-name: filter;
+          animation-name: filter;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
+}
+.table-container .header .search .filterDiv input {
+  width: 232px;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  padding-left: 20px;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+.table-container .header .search .filterDiv input::-moz-placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.table-container .header .search .filterDiv input:-ms-input-placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.table-container .header .search .filterDiv input::placeholder {
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.table-container .header .search .filterDiv .select {
+  width: 232px;
+  height: 24px;
+  background: #2e2b35;
+  border: none;
+  color: #fff;
+  margin-top: 10px;
+  font-size: 17px;
+}
+.table-container .header .search .filterDiv .select .activeValue {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.table-container .header .search .filterDiv .select .options {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-top: 10px;
+}
+.table-container .header .search .filterDiv .select .options h4 {
+  padding: 5px;
+  font-size: 20px;
+  font-weight: 100;
+}
+.table-container .header .search .filterDiv .select .options h4:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+.table-container table {
+  width: 100%;
+  border-radius: 5px;
+}
+.table-container table thead {
+  height: 48px;
+  background: rgba(255, 255, 255, 0.2);
+  border-width: 1px 1px 0px 1px;
+  border-style: solid;
+  border-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px 8px 0px 0px;
+}
+.table-container table thead tr th {
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 150%;
+  text-align: left;
+  color: #ffffff;
+  padding-left: 24px;
+}
+.table-container table tbody {
+  background: rgba(76, 73, 73, 0.45);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(7.5px);
+  -webkit-backdrop-filter: blur(7.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.table-container table tbody tr {
+  height: 62px;
+  text-align: left;
+  transition: ease-in 0.1s;
+}
+.table-container table tbody tr:hover {
+  background: #5454fb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 36px rgba(46, 46, 255, 0.5);
+}
+.table-container table tbody tr td {
+  padding-left: 24px;
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  color: #ffffff;
+}
+.table-container table tbody tr td button {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border: none;
+  font-size: 25px;
+  color: #fff;
+  margin-left: 5px;
+}
+.table-container .editSection {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(144, 144, 144, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.table-container .editSection .editModal {
+  width: 600px;
+  height: 100vh;
+  float: right;
+  background: rgba(144, 144, 144, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 50px;
+  -webkit-animation-name: editModal;
+          animation-name: editModal;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+}
+.table-container .editSection .editModal .title {
+  width: 100%;
+  font-size: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-container .editSection .editModal form {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.table-container .editSection .editModal form .item {
+  height: 65px;
+  gap: 10px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+}
+.table-container .editSection .editModal form .item input,
+.table-container .editSection .editModal form .item select {
+  height: 50px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  padding-left: 10px;
+}
+.table-container .editSection .editModal form .item input option,
+.table-container .editSection .editModal form .item select option {
+  color: #222;
+}
+.table-container .editSection .editModal form .item input:focus,
+.table-container .editSection .editModal form .item select:focus {
+  outline: none;
+}
+.table-container .editSection .editModal form .itemBtn {
+  display: flex;
+  height: 50px;
+  align-items: flex-end;
+  margin-top: 16px;
+  gap: 10px;
+}
+.table-container .editSection .editModal form .itemBtn button {
+  width: 100px;
+  height: 35px;
+  height: 35px;
+  background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+}
+.table-container .addBtn {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  background-color: #222;
+  webkit-box-shadow: 0px 0px 11px 10px rgba(31, 38, 135, 0.37);
+  box-shadow: 0px 0px 11px 10px rgba(31, 38, 135, 0.37);
+}
+.table-container .addSection {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(144, 144, 144, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+.table-container .addSection .addModal {
+  width: 600px;
+  height: 100vh;
+  float: right;
+  background: rgba(144, 144, 144, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 5px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 50px;
+  -webkit-animation-name: editModal;
+          animation-name: editModal;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  overflow: auto;
+}
+.table-container .addSection .addModal .title {
+  width: 100%;
+  font-size: 25px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.table-container .addSection .addModal .forms .form {
+  gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+.table-container .addSection .addModal .forms .form .item {
+  height: 65px;
+  gap: 10px;
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+}
+.table-container .addSection .addModal .forms .form .item input,
+.table-container .addSection .addModal .forms .form .item select {
+  height: 50px;
+  background: rgba(255, 255, 255, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(10.5px);
+  -webkit-backdrop-filter: blur(10.5px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 8px;
+  font-family: "THICCCBOI";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 150%;
+  color: #ffffff;
+  padding-left: 10px;
+}
+.table-container .addSection .addModal .forms .form .item input option,
+.table-container .addSection .addModal .forms .form .item select option {
+  color: #222;
+}
+.table-container .addSection .addModal .forms .form .item input:focus,
+.table-container .addSection .addModal .forms .form .item select:focus {
+  outline: none;
+}
+.table-container .addSection .addModal .forms .form .itemBtn {
+  display: flex;
+  height: 50px;
+  align-items: flex-end;
+  margin-top: 16px;
+  gap: 10px;
+}
+.table-container .addSection .addModal .forms .form .itemBtn button {
+  width: 100px;
+  height: 35px;
+  height: 35px;
+  background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 8px;
+  color: #fff;
+  border: none;
+}
+.table-container .addSection .addModal .addNewBtn {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: right;
+  margin-top: 30px;
+  background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%, rgba(255, 255, 255, 0) 100%);
+  color: #fff;
+  border: none;
+}
+.table-container .deleteSureModal {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(144, 144, 144, 0.25);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(9px);
+  -webkit-backdrop-filter: blur(9px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.table-container .deleteSureModal .deleteModal {
+  width: 400px;
+  height: 200px;
+  background: #5454fb;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 0px 36px rgba(46, 46, 255, 0.5);
+  text-align: center;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-radius: 12px;
+  position: relative;
+  -webkit-animation: deleteConfirm 0.6s 1;
+          animation: deleteConfirm 0.6s 1;
+}
+.table-container .deleteSureModal .deleteModal .close {
+  position: absolute;
+  top: 20px;
+  cursor: pointer;
+  color: red;
+  right: 20px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  padding: 1px;
+  background-color: #fff;
+}
+.table-container .deleteSureModal .deleteModal p {
+  font-size: 20px;
+}
+.table-container .deleteSureModal .deleteModal .btns {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.table-container .deleteSureModal .deleteModal .btns button {
+  width: 70px;
+  height: 30px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+@-webkit-keyframes editModal {
+  0% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+
+@keyframes editModal {
+  0% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(0px);
+  }
+}
+@-webkit-keyframes filter {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@keyframes filter {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes deleteConfirm {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes deleteConfirm {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,542 @@
+.table-container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 100px 0;
+  .header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h3 {
+      font-family: "THICCCBOI";
+      font-style: normal;
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 150%;
+      color: #ffffff;
+      span {
+        width: 86px;
+        height: 31px;
+        padding: 5px 30px;
+        font-size: 15px;
+        background: rgba(255, 255, 255, 0.15);
+        border-radius: 48px;
+      }
+    }
+    .search {
+      display: flex;
+      position: relative;
+      .search {
+        width: 378px;
+        height: 40px;
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        border-right: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 8px 0px 0px 8px;
+        font-family: "THICCCBOI";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 17px;
+        line-height: 150%;
+        color: #ffffff;
+        padding-left: 10px;
+        &::placeholder {
+          font-family: "THICCCBOI";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 150%;
+          color: #ffffff;
+        }
+      }
+      button {
+        width: 110px;
+        height: 40px;
+        border: none;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 0px 8px 8px 0px;
+        font-family: "THICCCBOI";
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 150%;
+        gap: 10px;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        color: #ffffff;
+        .filter {
+          font-size: 18px;
+        }
+      }
+      .filterDiv {
+        position: absolute;
+        width: 280px;
+        height: 552px;
+        right: 0;
+        top: 55px;
+        z-index: 100;
+        position: absolute;
+        background: #2e2b35;
+        box-shadow: -40px 8px 32px rgba(0, 0, 0, 0.52);
+        border-radius: 8px;
+        padding: 16px 24px;
+        animation-name: filter;
+        animation-iteration-count: 1;
+        animation-duration: 0.7s;
+        input {
+          width: 232px;
+          height: 48px;
+          background: rgba(255, 255, 255, 0.3);
+          border: 2px solid rgba(255, 255, 255, 0.1);
+          border-radius: 4px;
+          font-family: "Open Sans";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 16px;
+          line-height: 24px;
+          padding-left: 20px;
+          color: #ffffff;
+          margin-bottom: 30px;
+          &::placeholder {
+            font-family: "Open Sans";
+            font-style: normal;
+            font-weight: 600;
+            font-size: 16px;
+            line-height: 24px;
+            color: #ffffff;
+          }
+        }
+
+        .select {
+          width: 232px;
+          height: 24px;
+          background: #2e2b35;
+          border: none;
+          color: #fff;
+          margin-top: 10px;
+          font-size: 17px;
+          .activeValue {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          }
+          .options {
+            width: 100%;
+            background: rgba(255, 255, 255, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            margin-top: 10px;
+            h4 {
+              padding: 5px;
+              font-size: 20px;
+              font-weight: 100;
+              &:hover {
+                background: rgba(255, 255, 255, 0.3);
+                border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  table {
+    width: 100%;
+    border-radius: 5px;
+    thead {
+      height: 48px;
+      background: rgba(255, 255, 255, 0.2);
+      border-width: 1px 1px 0px 1px;
+      border-style: solid;
+      border-color: rgba(255, 255, 255, 0.1);
+      border-radius: 8px 8px 0px 0px;
+      tr {
+        th {
+          font-family: "THICCCBOI";
+          font-style: normal;
+          font-weight: 600;
+          font-size: 14px;
+          line-height: 150%;
+          text-align: left;
+          color: #ffffff;
+          padding-left: 24px;
+        }
+      }
+    }
+    tbody {
+      background: rgba(76, 73, 73, 0.45);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(7.5px);
+      -webkit-backdrop-filter: blur(7.5px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      tr {
+        height: 62px;
+        text-align: left;
+        transition: ease-in 0.1s;
+        &:hover {
+          background: #5454fb;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+          box-shadow: 0px 0px 36px rgba(46, 46, 255, 0.5);
+        }
+        td {
+          padding-left: 24px;
+
+          font-family: "THICCCBOI";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 19px;
+          color: #ffffff;
+          button {
+            width: 30px;
+            height: 30px;
+            background-color: transparent;
+            border: none;
+            font-size: 25px;
+            color: #fff;
+            margin-left: 5px;
+          }
+        }
+      }
+    }
+  }
+  .editSection {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(144, 144, 144, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    .editModal {
+      width: 600px;
+      height: 100vh;
+      float: right;
+      background: rgba(144, 144, 144, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 50px;
+      animation-name: editModal;
+      animation-iteration-count: 1;
+      animation-duration: 1s;
+      .title {
+        width: 100%;
+        font-size: 25px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      form {
+        // background: red;
+        gap: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 100px;
+        .item {
+          height: 65px;
+          gap: 10px;
+          width: 230px;
+          display: flex;
+          flex-direction: column;
+          input,
+          select {
+            height: 50px;
+            background: rgba(255, 255, 255, 0.4);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(10.5px);
+            -webkit-backdrop-filter: blur(10.5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            border-radius: 8px;
+            font-family: "THICCCBOI";
+            font-style: normal;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 150%;
+            color: #ffffff;
+            padding-left: 10px;
+            option {
+              color: #222;
+            }
+            &:focus {
+              outline: none;
+            }
+          }
+          &Btn {
+            display: flex;
+            height: 50px;
+            align-items: flex-end;
+            margin-top: 16px;
+            gap: 10px;
+            button {
+              width: 100px;
+              height: 35px;
+              height: 35px;
+              background: linear-gradient(
+                90deg,
+                #ec4899 0%,
+                #8b5cf6 100%,
+                rgba(255, 255, 255, 0) 100%
+              );
+              border-radius: 8px;
+              color: #fff;
+              border: none;
+            }
+          }
+        }
+      }
+    }
+  }
+  .addBtn {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    background-color: #222;
+    webkit-box-shadow: 0px 0px 11px 10px rgba(31, 38, 135, 0.37);
+    -moz-box-shadow: 0px 0px 11px 10px rgba(31, 38, 135, 0.37);
+    box-shadow: 0px 0px 11px 10px rgba(31, 38, 135, 0.37);
+  }
+
+  .addSection {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(144, 144, 144, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    .addModal {
+      width: 600px;
+      height: 100vh;
+      float: right;
+      background: rgba(144, 144, 144, 0.25);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(9px);
+      -webkit-backdrop-filter: blur(9px);
+      border-radius: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      padding: 50px;
+      animation-name: editModal;
+      animation-iteration-count: 1;
+      animation-duration: 1s;
+      overflow: auto;
+      .title {
+        width: 100%;
+        font-size: 25px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .forms {
+        .form {
+          // background: red;
+          gap: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          margin-top: 100px;
+          .item {
+            height: 65px;
+            gap: 10px;
+            width: 230px;
+            display: flex;
+            flex-direction: column;
+            input,
+            select {
+              height: 50px;
+              background: rgba(255, 255, 255, 0.4);
+              box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+              backdrop-filter: blur(10.5px);
+              -webkit-backdrop-filter: blur(10.5px);
+              border-radius: 10px;
+              border: 1px solid rgba(255, 255, 255, 0.18);
+              border-radius: 8px;
+              font-family: "THICCCBOI";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 16px;
+              line-height: 150%;
+              color: #ffffff;
+              padding-left: 10px;
+              option {
+                color: #222;
+              }
+              &:focus {
+                outline: none;
+              }
+            }
+            &Btn {
+              display: flex;
+              height: 50px;
+              align-items: flex-end;
+              margin-top: 16px;
+              gap: 10px;
+              button {
+                width: 100px;
+                height: 35px;
+                height: 35px;
+                background: linear-gradient(
+                  90deg,
+                  #ec4899 0%,
+                  #8b5cf6 100%,
+                  rgba(255, 255, 255, 0) 100%
+                );
+                border-radius: 8px;
+                color: #fff;
+                border: none;
+              }
+            }
+          }
+        }
+      }
+      .addNewBtn {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        float: right;
+        margin-top: 30px;
+        background: linear-gradient(
+          90deg,
+          #ec4899 0%,
+          #8b5cf6 100%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        color: #fff;
+        border: none;
+      }
+    }
+  }
+  .deleteSureModal {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(144, 144, 144, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(9px);
+    -webkit-backdrop-filter: blur(9px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    .deleteModal {
+      width: 400px;
+      height: 200px;
+      background: #5454fb;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      box-shadow: 0px 0px 36px rgba(46, 46, 255, 0.5);
+      text-align: center;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      border-radius: 12px;
+      position: relative;
+      animation: deleteConfirm 0.6s 1;
+      .close {
+        position: absolute;
+        top: 20px;
+        cursor: pointer;
+        color: red;
+        right: 20px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        padding: 1px;
+        background-color: #fff;
+      }
+      p {
+        font-size: 20px;
+      }
+      .btns {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        gap: 10px;
+        button {
+          width: 70px;
+          height: 30px;
+          border-radius: 10px;
+          border: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+@keyframes editModal {
+  0% {
+    transform: translateX(600px);
+  }
+  100% {
+    transform: translateX(00px);
+  }
+}
+
+@keyframes filter {
+  0% {
+    transform: translateY(600px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes deleteConfirm {
+  0% {
+    transform: scale(0.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+// @media (max-width: 500px) {
+//   .table-container {
+//     width: 100%;
+//     table {
+//       thead {
+//         tr {
+//           th {
+//             padding: 5px;
+//           }
+//         }
+//       }
+//       tbody {
+//         font-size: 10px;
+//         width: 100%;
+//         tr {
+//           td {
+//             padding: 5px;
+//             font-size: 10px;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

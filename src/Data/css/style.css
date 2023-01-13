@@ -1,0 +1,215 @@
+.container {
+  width: 900px;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 100px 0;
+}
+.container h3 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 48px;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.container .todo-section .item {
+  margin: 10px 0;
+  display: flex;
+  color: #fff;
+  align-items: center;
+  gap: 20px;
+}
+.container .todo-section .item .checkboxfalse {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid #ffffff;
+}
+.container .todo-section .item .checkboxtrue {
+  width: 30px;
+  height: 30px;
+  background-color: transparent;
+  border-radius: 5px;
+  background: #008000;
+  border: 2px solid #008000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .todo-section .item .checkboxtrue .tick {
+  color: #fff;
+  font-size: 20px;
+}
+.container .todo-section .item .todo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  gap: 199px;
+  width: 796px;
+  height: 54px;
+  background: #111827;
+  border-radius: 16px;
+  flex: none;
+  order: 1;
+  flex-grow: 0;
+}
+.container .todo-section .item .todo .title {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 32px;
+  color: #ffffff;
+}
+.container .todo-section .item .todo input {
+  width: auto;
+  height: 40px;
+  padding-left: 5px;
+  font-size: 15px;
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #8b5cf6;
+}
+.container .todo-section .item .todo .actions {
+  width: 150px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+.container .todo-section .item .todo .actions .edit {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ec4899 0%, #8b5cf6 100%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .todo-section .item .todo .actions .delete {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
+  text-transform: uppercase;
+  color: #dc143c;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.container .addBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: red;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  background: linear-gradient(180deg, #ec4899 0%, #8b5cf6 100%, rgba(255, 255, 255, 0) 100%);
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+.container .add-modal {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(237, 217, 217, 0.2);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .add-modal .add-secttion {
+  width: 800px;
+  height: 300px;
+  background-color: #111827;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: relative;
+  -webkit-animation: add;
+          animation: add;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+}
+.container .add-modal .add-secttion span {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: #dc143c;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  color: #fff;
+  cursor: pointer;
+}
+.container .add-modal .add-secttion textarea {
+  width: 400px;
+  min-height: 40px;
+  height: auto;
+  background-color: transparent;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 10px 5px 10px;
+}
+.container .add-modal .add-secttion button {
+  width: 200px;
+  height: 40px;
+  margin-top: 30px;
+  background: linear-gradient(45deg, #ec4899 0%, #8b5cf6 100%, rgba(255, 255, 255, 0) 100%);
+  font-size: 20px;
+  color: #fff;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@-webkit-keyframes add {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes add {
+  0% {
+    transform: scale(0.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}/*# sourceMappingURL=style.css.map */
